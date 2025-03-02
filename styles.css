@@ -1,0 +1,256 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(225, 224, 224);
+  color: #333;
+}
+.logo img{
+margin-top:-45px;
+}
+.logo p{
+margin-left:90px;
+margin-top:-60px;
+}
+.read{
+margin:5px 0px;
+    padding: 10px;
+height:400px;
+    background-color:rgb(204, 203, 203);
+}
+.read { 
+height:430px;
+background-image: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(0,0,0, 0.1));
+color:white;
+
+}
+.read h1{
+margin-right:500px;
+margin-left:10px;
+margin-top:60px;
+}
+.read p{
+text-align:left;
+margin-right:500px;
+margin-left:20px;
+margin-top:30px;
+}
+
+.read img{
+border-radius:20px;
+margin-left:700px;
+margin-top:-300px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.home{
+width:97.3%;
+margin-top:-7px;
+    padding: 17px;
+color:white;
+    background-color:#c2cbd3;
+height:550px;
+background-image: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(0,0,0, 0)), url("background1.jpg");
+  background-size:100%;
+    background-repeat: no-repeat;
+}
+
+.home p{
+margin-top:30px;
+}
+.home h1{
+margin-top:110px;
+}
+
+.size{
+margin-top:50px;
+margin-right:500px;
+font-size:20px;
+}
+nav {
+height:50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,1);
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+border-bottom:4px solid;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+.about{
+margin:7px 0px;
+width:96.8%;
+    padding: 20px;
+border-radius:0px;
+    background-color:rgb(204, 203, 203);
+font-size:17px;
+height:450px;
+ color:black;
+}
+.about img{
+border-radius:5px;
+}
+
+
+.courses {
+         height:580px;
+margin:7px 0px;
+width:96.8%;
+    padding: 20px;
+border-radius:0px;
+    background-color:rgb(204, 203, 203);
+color:black; 
+
+        }
+       .courses h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+
+        }
+        .course {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .course:hover {
+            transform: translateY(-5px);
+        }
+        .course a {
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+        .icon {
+            font-size: 70px;
+            margin-bottom: 10px;
+        }
+
+.contact-section {
+   margin:7px 0px;
+    padding: 20px;
+border-radius:0px;
+    background-color:rgb(204, 203, 203);
+height:580px;
+background-image:  url("contact.avif");
+  background-size:100%;
+    background-repeat: no-repeat;
+font-size:15px;
+color:black;
+}
+
+.container {
+text-align:center;
+ }
+
+
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    margin-bottom: 5px;
+}
+ /* Admission Section */
+        .admission {
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
+            padding: 20px;
+            border-radius: 0px;
+            margin: 7px 0px;
+            max-width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .admission h2 {
+            color: black;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .admission form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admission form label {
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .admission form input, .admission form select, .admission form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .admission form button {
+            background: linear-gradient(135deg, #003366, #002244);
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: transform 0.3s ease;
+        }
+
+        .admission form button:hover {
+            transform: scale(1.03);
+background:black;
+        }
+
+footer {
+  background-color:black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 7px;
+position:sticky;
+
+}

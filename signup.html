@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style> 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow: hidden;
+  background-image: url("img1.jpg");
+}
+.logo img{
+margin-top:-45px;
+}
+.logo p{
+margin-left:90px;
+margin-top:-60px;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  width: 400px;
+  height: auto;
+  text-align: center;
+}
+
+.signup-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+  margin-bottom: 15px;
+}
+
+.signup-form input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.signup-form button {
+  width: 92%;
+  padding: 10px;
+  background: linear-gradient(135deg, #003366, #002244);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signup-form button:hover {
+  background: black;
+  color: white;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+margin-bottom:-137px;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,1);
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 4px solid;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+}
+    </style>
+</head>
+<body>
+<nav>
+     <div class="logo">
+<img src="logo.png" height="90px" width="90px">
+<p>Blue Ridge College<p></div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">Courses</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="index.html">Admission</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="signup-form" id="beforeOtp">
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number (10 digits)" required>
+            <button type="button" onclick="sendOTP()">Send OTP</button>
+        </form>
+    </div>
+
+    <div class="signup-form" id="afterOtp" style="display: none;">
+        <h2>Verify OTP</h2>
+        <form id="signupForm">
+            <input type="number" id="otp" placeholder="Enter OTP" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Blue Ridge College. All rights reserved.</p>
+</footer>
+
+<script>
+    function sendOTP() {
+        let phone = document.getElementById("phone").value;
+        if (phone.length !== 10) {
+            alert("Please enter a valid 10-digit phone number.");
+            return;
+        }
+        alert("OTP sent successfully!");
+        document.getElementById("beforeOtp").style.display = "none";
+        document.getElementById("afterOtp").style.display = "block";
+    }
+    
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        let otp = document.getElementById("otp").value;
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirmPassword").value;
+        
+        if (otp !== "1234") { // Mock OTP verification
+            alert("Invalid OTP. Please try again.");
+            return;
+        }
+        
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return;
+        }
+        
+        alert("Signup successful!");
+        window.location.href = "profile.html";
+    });
+</script>
+</body>
+</html>
